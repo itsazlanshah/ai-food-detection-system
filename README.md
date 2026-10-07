@@ -1,52 +1,74 @@
-# Artificial Intelegence Semester Project
+# AI Food Detection & Classification System
 
-**Live demo:** Not deployed yet
+An AI-powered food detection and nutritional analysis system developed as a university Artificial Intelligence semester project.
 
-## What it does
-This application is an **AI-powered Food Nutrition Classifier** that uses computer vision to identify various food items from images. Once identified, it provides comprehensive nutritional data, including calories, protein, carbs, fats, and personalized health tips, helping users track their dietary intake with ease.
+**Live Demo:** Not deployed yet
 
-## Tech stack
-- **Python**: Core programming language.
-- **Streamlit**: Framework for building the interactive web interface.
-- **YOLOv11 (Ultralytics)**: State-of-the-art object detection and classification model.
-- **PyTorch**: Backend engine for deep learning model inference.
-- **OpenCV & PIL**: Used for image preprocessing and camera integration.
-- **Pandas & NumPy**: For efficient data handling and nutritional calculations.
+## Overview
 
-## Key features
-- **Real-time Identification**: Recognizes 20+ different food categories (from Chicken Curry to Steak) with high confidence.
-- **Detailed Nutrition Profiles**: Displays complete macronutrient breakdowns (Protein, Carbs, Fat, Fiber, Sugar) for every detected item.
-- **Dynamic Portion Control**: Allows users to adjust the portion size (in grams) to scale nutritional values accurately for their specific meal.
-- **Dual Capture Methods**: Support for both local image uploads and direct camera capture within the web app.
-- **Health Scoring System**: Provides an AI-calculated health score (1-10) and actionable dietary tips for each food item.
+This application uses computer vision and deep learning to identify food items from images. After detecting a food item, the system provides nutritional information such as calories, protein, carbohydrates, fats, fiber, and sugar, along with a health score and dietary tips.
 
-## Getting started
-To run this project locally, follow these steps:
+## Features
 
-1. **Clone the repository**:
-   ```bash
-   git clone <repository-url>
-   cd ai-food-detection-system
-   ```
+* **Food Detection:** Identifies 20+ different food categories using YOLOv11.
+* **Nutritional Information:** Provides calories, protein, carbohydrates, fats, fiber, and sugar.
+* **Portion Control:** Allows users to adjust portion size in grams and calculate nutritional values accordingly.
+* **Image & Camera Input:** Supports both image uploads and direct camera capture.
+* **Health Score:** Provides a health score from 1–10 with dietary recommendations.
+* **Interactive Interface:** Built using Streamlit for a simple and interactive user experience.
 
-2. **Prepare the Model**:
-   The application expects the model file to be in the root directory. Copy the weights:
-   ```bash
-   # On Windows
-   copy yolov11m_cls_50epochs45\weights\best.pt .\best.pt
-   ```
+## Technologies Used
 
-3. **Install Dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   # Note: Ensure ultralytics and torch are also installed
-   pip install ultralytics torch
-   ```
+* **Python** — Core programming language
+* **YOLOv11 (Ultralytics)** — Food detection and classification
+* **PyTorch** — Deep learning model inference
+* **Streamlit** — Web interface
+* **OpenCV & PIL** — Image processing and camera integration
+* **Pandas & NumPy** — Data processing and nutritional calculations
 
-4. **Launch the App**:
-   ```bash
-   streamlit run "app (1).py"
-   ```
+## How to Run
 
-## Why I built this
-I developed this project for my Artificial Intelligence class at university to explore how deep learning can be applied to real-world health and wellness challenges. It served as a successful demonstration of real-time computer vision during my semester project demos.
+### 1. Clone the repository
+
+```bash
+git clone <repository-url>
+cd ai-food-detection-system
+```
+
+### 2. Prepare the Model
+
+Place the trained model file `best.pt` in the root directory of the project.
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+pip install ultralytics torch
+```
+
+### 4. Run the Application
+
+```bash
+streamlit run "app (1).py"
+```
+
+The application will open in your browser.
+
+## Project Team
+
+**Azlan Shah**
+**Muhammad Nofal Zia**
+
+This project was developed collaboratively as part of our Artificial Intelligence semester project at Bahria University.
+
+## Purpose
+
+The project was developed to explore the practical application of deep learning and computer vision in health and nutrition. It provided hands-on experience with object detection, model inference, image processing, and building an interactive AI application.
+
+## Future Improvements
+
+* Deploy the application online.
+* Expand the food dataset and number of supported food categories.
+* Improve detection accuracy for multiple food items in a single image.
+* Add user profiles and meal history.
+* Provide more personalized nutritional recommendations.
